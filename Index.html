@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roots Clinic: Compassionate fertility & women's health care in India by Dr. Ambily Jose (AIIMS). Personalized IVF, PCOD management & gynecological care with empathy at every step.">
+  <title>Roots Clinic | Compassionate Fertility & Women's Health Care</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Google Fonts - Lora for warmth, Inter for readability -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --roots-green: #4a7c59;
+      --roots-cream: #f8f5f0;
+      --roots-sage: #8a9b7b;
+      --roots-terracotta: #c77966;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--roots-green);
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(74, 124, 89, 0.92), rgba(74, 124, 89, 0.95)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 0;
+    }
+    
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section-light {
+      background-color: var(--roots-cream);
+    }
+    
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--roots-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--roots-green);
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    
+    .service-content {
+      padding: 1.5rem;
+    }
+    
+    .doctor-profile {
+      background-color: var(--roots-cream);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+    
+    .doctor-image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      margin-bottom: 1.5rem;
+    }
+    
+    .doctor-image {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
+      position: relative;
+      border-left: 4px solid var(--roots-green);
+    }
+    
+    .testimonial::before {
+      content: """;
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      font-family: 'Lora', serif;
+      font-size: 5rem;
+      color: var(--roots-sage);
+      opacity: 0.2;
+      line-height: 1;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+      border: 2px solid var(--roots-green);
+    }
+    
+    .cta-section {
+      background: linear-gradient(rgba(74, 124, 89, 0.95), rgba(64, 108, 77, 0.98)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 5rem 0;
+    }
+    
+    .btn-roots {
+      background-color: var(--roots-terracotta);
+      border: none;
+      padding: 0.85rem 2.2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 4px 10px rgba(199, 121, 102, 0.3);
+    }
+    
+    .btn-roots:hover {
+      background-color: #b46555;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(199, 121, 102, 0.4);
+    }
+    
+    .trust-badge {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    
+    .trust-badge:hover {
+      transform: scale(1.03);
+    }
+    
+    .trust-badge i {
+      font-size: 2.5rem;
+      color: var(--roots-green);
+      margin-bottom: 0.5rem;
+    }
+    
+    .faq-item {
+      border: none;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    }    
+    .faq-item button {
+      background-color: var(--roots-cream);
+      color: var(--roots-green);
+      font-weight: 600;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .faq-item button:focus {
+      box-shadow: none;
+    }
+    
+    .faq-item .accordion-body {
+      background-color: white;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .footer {
+      background-color: #2d3a35;
+      color: rgba(255,255,255,0.85);
+      padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 0.25rem 0;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+    
+    .clinic-location {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      height: 200px;
+      background: url('https://images.unsplash.com/photo-1579621970588-3b445590d4c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+      margin-top: 1.5rem;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    
+    .social-icon:hover {
+      background-color: var(--roots-green);
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      .hero, .cta-section {
+        padding: 3.5rem 0;
+      }
+      
+      .doctor-profile {
+        padding: 1.8rem;
+      }
+      
+      .section {
+        padding: 2.5rem 0;
+      }
+      
+      .doctor-image {
+        height: 350px;
+      }
+      
+      .clinic-location {
+        height: 150px;
+        margin-top: 1rem;
+      }
+    }
+    
+    .hover-opacity-100 {
+      transition: opacity 0.3s ease;
+    }
+    
+    .hover-opacity-100:hover {
+      opacity: 1 !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <span class="h4 mb-0" style="color: var(--roots-green); font-family: 'Lora', serif; font-weight: 600;">Roots Clinic</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#about">Our Approach</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#faq">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-roots text-white px-4 ms-lg-3" href="#consultation">Book Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-4">Caring for Women at Every Step</h1>
+          <p class="lead mb-4 opacity-90">Compassionate fertility and gynecological care with you at the center—because your journey deserves understanding, expertise, and hope.</p>
+          <a href="#consultation" class="btn btn-roots btn-lg px-4 py-3">Begin Your Journey</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <div class="container py-4">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="trust-badge">
+          <i class="bi bi-mortarboard-fill"></i>
+          <div class="h5 fw-bold text-dark mb-1">AIIMS-Trained</div>
+          <div class="text-muted">Expertise you can trust</div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="trust-badge">
+          <i class="bi bi-hand-heart-fill"></i>
+          <div class="h5 fw-bold text-dark mb-1">Ethical Care</div>
+          <div class="text-muted">No unnecessary interventions</div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="trust-badge">
+          <i class="bi bi-person-lines-fill"></i>
+          <div class="h5 fw-bold text-dark mb-1">Personalized Plans</div>
+          <div class="text-muted">Your body, your timeline</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Dr. Ambily -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="doctor-profile">
+            <h2 class="mb-4">Your Partner in Care</h2>
+            <p class="mb-4">Dr. Ambily Jose brings deep expertise from AIIMS New Delhi to every consultation—but what truly defines her practice is how she listens. She believes fertility care should never feel rushed or impersonal.</p>
+            <p class="mb-4">With advanced training in reproductive medicine and a gentle approach to even the most complex cases—including male infertility and fertility preservation—she creates treatment plans that honor your values, timeline, and emotional wellbeing.</p>
+            <div class="bg-white p-3 rounded mb-4">
+              <p class="mb-1 fw-medium"><span class="text-muted">Training:</span> MBBS, MD OBG (Gold Medalist), DNB, FNB — All from AIIMS New Delhi</p>
+              <p class="mb-1 fw-medium"><span class="text-muted">Special Focus:</span> IVF/ICSI, PCOD, minimally invasive surgery, fertility preservation</p>
+            </div>
+            <p class="fst-italic mb-0">"Your journey is unique. My role is to walk beside you with expertise, empathy, and honesty—not to rush you toward a single solution."</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="doctor-image-container">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr. Ambily Jose - Fertility Specialist" class="doctor-image">
+          </div>
+          <div class="bg-white p-3 rounded-3 shadow-sm mt-3">
+            <div class="d-flex align-items-start">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Priya T." class="author-avatar">
+              <div>
+                <p class="mb-1 fst-italic">"After three years of uncertainty elsewhere, Dr. Ambily explained my PCOD simply, created a plan that respected my anxiety about injections, and held space for my questions. I finally felt seen."</p>
+                <div class="fw-medium">— Priya T., Chennai</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-light" id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Gentle Care for Every Stage</h2>
+        <p class="text-muted w-75 mx-auto">From adolescence through menopause—and especially on the path to parenthood—we support your whole health with evidence-based, minimally invasive options.</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-heart-pulse fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">Fertility Care</h3>
+              <p class="mb-0">Personalized evaluation and treatment including ovulation induction, IUI, IVF/ICSI, and management of complex cases like azoospermia with TESA.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-flower3 fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">PCOD & Hormonal Health</h3>
+              <p class="mb-0">Compassionate management of PCOD, irregular periods, and hormonal imbalances with lifestyle integration and medical support tailored to your goals.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-person-check-fill fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">Preventive Gynecology</h3>
+              <p class="mb-0">Well-woman check-ups, Pap smears, breast exams, and management of menstrual disorders in a judgment-free, comfortable environment.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-egg fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">Fertility Preservation</h3>
+              <p class="mb-0">Egg freezing and fertility counseling for women planning ahead due to medical treatments, career timelines, or personal readiness.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-scissors fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">Minimally Invasive Surgery</h3>
+              <p class="mb-0">Laparoscopy and hysteroscopy for diagnosis and treatment with faster recovery, less discomfort, and minimal scarring.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card">
+            <div class="card-body service-content d-flex flex-column">
+              <div class="service-icon mb-3">
+                <i class="bi bi-chat-square-heart fs-1"></i>
+              </div>
+              <h3 class="h5 mb-3">Preconception Counseling</h3>
+              <p class="mb-0">Optimize your health before pregnancy with personalized guidance on nutrition, supplements, lifestyle, and managing existing conditions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="#consultation" class="btn btn-roots btn-lg px-5 py-3">Explore All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Voices of Hope</h2>
+        <p class="text-muted w-75 mx-auto">Hear from women who've walked this path with us</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="testimonial">
+            <p class="mb-0">"After two failed IVF cycles elsewhere, Dr. Ambily reviewed my entire history and found a thyroid issue no one else had addressed. With proper treatment and a modified protocol, we succeeded on our first try with her. She sees the whole person, not just test results."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ananya R." class="author-avatar">
+              <div>
+                <div class="fw-bold">Ananya R.</div>
+                <div class="text-muted">IVF Success, Age 38</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="testimonial">
+            <p class="mb-0">"As someone with severe endometriosis, I dreaded gynecological visits. Dr. Ambily's gentle approach and clear explanations about my laparoscopy options made all the difference. She respected my pain and never dismissed my concerns. I finally feel in control of my health."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Meera K." class="author-avatar">
+              <div>
+                <div class="fw-bold">Meera K.</div>
+                <div class="text-muted">Endometriosis Management</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="testimonial">
+            <p class="mb-0">"My husband and I were devastated by his azoospermia diagnosis. Dr. Ambily explained TESA with such clarity and compassion. She coordinated everything with the urologist and embryologist. Today we have our miracle baby. She gave us hope when we had none."</p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Divya & Rajesh" class="author-avatar">
+              <div>
+                <div class="fw-bold">Divya & Rajesh</div>
+                <div class="text-muted">TESA + IVF Success</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Roots -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h2 class="mb-4">Why Women Choose Roots Clinic</h2>
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0 me-3 mt-1">
+              <div class="bg-success rounded-circle" style="width: 8px; height: 8px;"></div>
+            </div>
+            <div>
+              <h4 class="h6 fw-bold mb-1">No Rushed Consultations</h4>
+              <p class="mb-0">We protect time for your questions—because understanding your treatment reduces anxiety and builds partnership.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0 me-3 mt-1">
+              <div class="bg-success rounded-circle" style="width: 8px; height: 8px;"></div>
+            </div>
+            <div>
+              <h4 class="h6 fw-bold mb-1">Ethical Treatment Paths</h4>
+              <p class="mb-0">We recommend only what you need. If lifestyle changes might help first, we'll start there—no unnecessary IVF cycles.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-4">
+            <div class="flex-shrink-0 me-3 mt-1">
+              <div class="bg-success rounded-circle" style="width: 8px; height: 8px;"></div>
+            </div>
+            <div>
+              <h4 class="h6 fw-bold mb-1">Whole-Person Support</h4>
+              <p class="mb-0">We coordinate with nutritionists and counselors because fertility health includes emotional and physical wellbeing.</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <div class="flex-shrink-0 me-3 mt-1">
+              <div class="bg-success rounded-circle" style="width: 8px; height: 8px;"></div>
+            </div>
+            <div>
+              <h4 class="h6 fw-bold mb-1">Clarity on Costs</h4>
+              <p class="mb-0">Transparent pricing with no hidden fees—because financial stress shouldn't compound your fertility journey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1576091160399-1929a3a8b64d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Compassionate care at Roots Clinic" class="img-fluid rounded-4 shadow-lg" style="object-fit: cover; height: 450px; width: 100%;">
+            <div class="position-absolute bottom-0 start-0 bg-white p-3 m-3 rounded-3 shadow" style="max-width: 90%;">
+              <div class="d-flex align-items-center">
+                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; font-size: 0.75rem; flex-shrink: 0; margin-right: 8px;">15+</div>
+                <p class="mb-0 fw-medium">Years of specialized experience in reproductive medicine</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-light" id="faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="mb-3">Questions You May Have</h2>
+        <p class="text-muted w-75 mx-auto">Honest answers to ease your mind before you reach out</p>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item faq-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  When should I see a fertility specialist?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  If you're under 35 and have been trying to conceive for 12 months (or 6 months if you're 35+), it's wise to seek evaluation. Earlier consultation is recommended if you have irregular periods, known PCOD, endometriosis, or a history of pelvic infections. We welcome you at any point—you don't need to wait a full year if you're feeling concerned.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item faq-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Is IVF my only option?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Not at all. Many couples conceive with simpler interventions like ovulation induction with timed intercourse or IUI. We begin with thorough evaluation to understand your unique situation, then recommend the least invasive effective path first. IVF is one valuable tool—but not the starting point for everyone.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item faq-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  How do you handle male factor infertility?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Dr. Ambily has specialized training in male infertility management, including complex cases like azoospermia (no sperm in ejaculate). We offer comprehensive semen analysis, hormonal evaluation, and procedures like TESA (testicular sperm extraction) when needed—all coordinated with your partner's comfort and dignity in mind.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item faq-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What makes your approach different?
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Three things: First, we protect consultation time so you never feel rushed. Second, we explain options in plain language with visual aids—no confusing jargon. Third, we honor your values: if you have concerns about embryo disposition or prefer to try natural methods first, we design a plan that respects your boundaries while staying medically sound.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item faq-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Do you offer support during pregnancy after fertility treatment?
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Absolutely. We provide seamless transition to obstetric care with our trusted partners, and Dr. Ambily remains available for consultation throughout your pregnancy. Many of our patients continue to see us for gynecological care long after their fertility journey ends.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="consultation">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="display-5 fw-bold mb-4">Your Journey Begins with a Conversation</h2>
+          <p class="lead mb-4 opacity-90">No pressure, no assumptions—just compassionate listening and clear guidance tailored to your story.</p>
+          <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <a href="tel:+914449671234" class="btn btn-light btn-lg px-4 py-3 fw-bold">
+              <i class="bi bi-telephone me-2"></i>Call Us: +91 44 4967 1234
+            </a>
+            <a href="https://wa.me/919876543210" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">
+              <i class="bi bi-whatsapp me-2"></i>WhatsApp Consultation
+            </a>
+          </div>
+          <p class="mt-4 opacity-85 small">Prefer to reflect first? <a href="https://rootsclinics.in/blog" class="text-white text-decoration-underline">Read our gentle guides on PCOD, IVF, and preparing for pregnancy</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="mb-4" style="color: white; font-family: 'Lora', serif;">Roots Clinic</h4>
+          <p class="mb-3">Caring for women from adolescence through menopause with expertise rooted in compassion.</p>
+          <p class="mb-0"><strong>Chennai Clinic:</strong><br> 42, Dr. Radhakrishnan Salai, Mylapore, Chennai 600004</p>
+          <div class="clinic-location mt-3"></div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-4" style="color: var(--roots-sage);">Quick Links</h5>
+          <div class="footer-links">
+            <a href="#services" class="hover-opacity-100">Our Services</a>
+            <a href="#about" class="hover-opacity-100">About Dr. Ambily</a>
+            <a href="#testimonials" class="hover-opacity-100">Patient Stories</a>
+            <a href="#faq" class="hover-opacity-100">FAQs</a>
+            <a href="https://rootsclinics.in/blog" class="hover-opacity-100">Fertility Resources</a>
+            <a href="https://rootsclinics.in/contact" class="hover-opacity-100">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-4" style="color: var(--roots-sage);">Connect With Care</h5>
+          <p class="mb-2"><i class="bi bi-telephone me-2"></i> +91 44 4967 1234</p>
+          <p class="mb-2"><i class="bi bi-envelope me-2"></i> care@rootsclinics.in</p>
+          <p class="mb-3"><i class="bi bi-clock me-2"></i> Mon-Sat: 9:00 AM - 6:00 PM</p>
+          <div class="d-flex mt-3">
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-opacity-25 mt-4 pt-4 text-center">
+        <p class="mb-0 small opacity-75">© 2026 Roots Clinic. All rights reserved. | Ethical fertility care guided by AIIMS-trained expertise</p>
+        <p class="mb-0 small opacity-75 mt-2">*Success rates vary based on individual factors. We provide realistic expectations with every treatment plan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Simple scroll behavior for anchor links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Add hover effect for opacity links
+    document.querySelectorAll('.hover-opacity-100').forEach(el => {
+      el.addEventListener('mouseenter', () => el.classList.add('opacity-100'));
+      el.addEventListener('mouseleave', () => el.classList.remove('opacity-100'));
+    });
+    
+    // Initialize tooltips if needed
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+</body>
+</html>
